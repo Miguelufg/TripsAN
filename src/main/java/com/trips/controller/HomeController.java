@@ -1,10 +1,11 @@
 package com.trips.controller;
-
+import java.util.LinkedList;
 import org.springframework.stereotype.Controller;
-
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+
+import java.util.List;
 @Controller
 public class HomeController {
 
@@ -17,6 +18,20 @@ public class HomeController {
 		return "home";
 		
 	}
+	@GetMapping("/listado")
+	public String mostrarListado(Model model) {
+		
+		List<String> lista = new LinkedList<String>();
+		lista.add(" En la montaña");
+		lista.add(" En la Ciudad");
+		lista.add(" En la pueblos");
+		lista.add(" En la playas");
+		
+		model.addAttribute("ListadoTrips", lista);
+		
+		return "listado";
+	}
+	
 	
 	
 }
