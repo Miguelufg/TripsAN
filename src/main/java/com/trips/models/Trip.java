@@ -8,11 +8,26 @@ public class Trip {
 	private String descripcion;
 	private double costo;
 	private  int calificacion;
-	private String imagen;
 	private String detalle;
 	private boolean activo;
 	private Date fecha;
+	private Integer destacado;
+	private String imagen="no-image.png";
 	
+	@Override
+	public String toString() {
+	    return "Trip [Id=" + Id 
+	        + ", nomTrip=" + nomTrip 
+	        + ", descripcion=" + descripcion 
+	        + ", costo=" + costo 
+	        + ", calificacion=" + calificacion 
+	        + ", imagen=" + imagen 
+	        + ", detalle=" + detalle 
+	        + ", activo=" + activo 
+	        + ", fecha=" + fecha 
+	        + "]";
+	}
+
 	
 	public Integer getId() {
 		return Id;
@@ -67,6 +82,16 @@ public class Trip {
 	}
 	public void setFecha(Date fecha) {
 		this.fecha = fecha;
+	}
+
+
+	public Integer getDestacado() {
+		return destacado;
+	}
+
+
+	public void setDestacado(Integer destacado) {
+		this.destacado = destacado;
 	}
 	
 	

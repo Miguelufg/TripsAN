@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle de Trip</title>
+</head>
+<body>
+    <h1>Detalle de Trip</h1>
+
+    <h3 th:text="'Id: ' + ${trip.id}"></h3>
+    <h3 th:text="'Nombre del Trip: ' + ${trip.nomTrip}"></h3>
+    <h3 th:text="'Descripción: ' + ${trip.descripcion}"></h3>
+    <h3 th:text="'Costo: $' + ${trip.costo}"></h3>
+    <h3 th:text="'Calificación: ' + ${trip.calificacion}"></h3>
+    <h3 th:text="'Detalle: ' + ${trip.detalle}"></h3>
+    <h3 th:text="'Activo: ' + ${trip.activo}"></h3>
+    <h3 th:text="'Fecha de publicación: ' + ${trip.fecha}"></h3>
+
+    <!-- Mostrar imagen si existe -->
+    <div th:if="${trip.imagen}">
+        <img th:src="@{'/images/' + ${trip.imagen}}" alt="Imagen del Trip">
+    </div>
+</body>
+</html>
