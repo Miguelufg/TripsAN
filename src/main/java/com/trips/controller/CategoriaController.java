@@ -31,6 +31,8 @@ public class CategoriaController {
 
 	        return "categoriasTrip/listCategoria"; // vista que se muestra después de guardar
 	    }
+	    
+	    
 	}
 
 
